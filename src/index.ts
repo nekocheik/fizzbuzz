@@ -1,6 +1,16 @@
-export function fizzBuzz(n: number): string | number {
-    return n % 3 === 0 ? 'Fizz' : n;
+export function fizzBuzz(n: number): string | number { 
+  if (isMultipleOf(3 , n)) { 
+    return "Fizz" 
+  } 
+  if (isMultipleOf(5, n)) {
+    return "Buzz" 
+  }
+  return n;
 }
+
+export function isMultipleOf(multiple : number, n: number): boolean {
+  return  n % multiple === 0
+} 
 
 
 /*
