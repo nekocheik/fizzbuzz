@@ -1,11 +1,15 @@
 export function fizzBuzz(n: number): string | number { 
-  if (isMultipleOf(3 , n)) { 
-    return "Fizz" 
+  const isMultipleOfThree = isMultipleOf(3 , n)
+  const isMultipleOfFive = isMultipleOf(5 , n) 
+  let result = "" 
+
+  if (isMultipleOfThree) { 
+    result += "Fizz" 
   } 
-  if (isMultipleOf(5, n)) {
-    return "Buzz" 
+  if (isMultipleOfFive) {
+    result += "Buzz" 
   }
-  return n;
+  return result || n;
 }
 
 export function isMultipleOf(multiple : number, n: number): boolean {
